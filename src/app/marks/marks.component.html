@@ -1,0 +1,101 @@
+<form (ngSubmit)="addMarks(details)" #details="ngForm">
+    <div><h3>Enrollment No - </h3><p>{{infoservice.result[0].enroll}}</p>
+    </div>
+    <div><h3>Semester - </h3><p>{{infoservice.result[0].semester}}</p>
+    </div>
+    <div><h3>Year - </h3><p>{{infoservice.result[0].year}}</p>
+    </div>
+        <table border="1px solid black">
+        <tr>
+            <th>SUBJECTS</th>
+            <th>Code</th>
+            <th>CREDIT TH</th>
+            <th>CREDIT PR</th>
+            <th>MAX TH</th>
+            <th>MAX PR</th>
+            <th>MT</th>
+            <th>TH</th>
+            <th>PR</th>
+            <th>Backlog</th>
+        </tr>
+        <tr>
+            <td  align="right" class="style1">{{infoservice.result[0].subject}}</td>        
+            <td  align="right" class="style1">{{infoservice.result[0].code}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[0].creditth}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[0].creditpr}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[0].maxtheory}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[0].maxpractical}}</td> 
+            <td  align="right" class="style1"><input type="text" class="form-control" name="MT0" #MT0="ngModel" ngModel/></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="TH0" #TH0="ngModel" ngModel /></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="PR0" #PR0="ngModel" ngModel /></td>
+            <td  align="right" class="style1">{{infoservice.backlog0}}</td> 
+            
+            
+        </tr>
+        <tr>
+            <td  align="right" class="style1">{{infoservice.result[1].subject}}</td>        
+            <td  align="right" class="style1">{{infoservice.result[1].code}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[1].creditth}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[1].creditpr}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[1].maxtheory}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[1].maxpractical}}</td> 
+            <td  align="right" class="style1"><input type="text" class="form-control" name="MT1" #MT1="ngModel" ngModel/></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="TH1" #TH1="ngModel" ngModel /></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="PR1" #PR1="ngModel" ngModel /></td>
+            <td  align="right" class="style1">{{infoservice.backlog1}}</td> 
+        </tr>
+        <tr>
+            <td  align="right" class="style1">{{infoservice.result[2].subject}}</td>        
+            <td  align="right" class="style1">{{infoservice.result[2].code}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[2].creditth}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[2].creditpr}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[2].maxtheory}}</td> 
+            <td  align="right" class="style1">{{infoservice.result[2].maxpractical}}</td> 
+            <td  align="right" class="style1"><input type="text" class="form-control" name="MT2" #MT2="ngModel" ngModel/></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="TH2" #TH2="ngModel" ngModel /></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="PR2" #PR2="ngModel" ngModel /></td>
+            <td  align="right" class="style1">{{infoservice.backlog2}}</td> 
+        </tr>
+        <tr>
+        <td  align="right" class="style1">{{infoservice.result[3].subject}}</td>        
+        <td  align="right" class="style1">{{infoservice.result[3].code}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[3].creditth}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[3].creditpr}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[3].maxtheory}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[3].maxpractical}}</td> 
+        <td  align="right" class="style1"><input type="text" class="form-control" name="MT3" #MT3="ngModel" ngModel/></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="TH3" #TH3="ngModel" ngModel /></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="PR3" #PR3="ngModel" ngModel /></td>
+            <td  align="right" class="style1">{{infoservice.backlog3}}</td> 
+        </tr>
+    <tr>
+    <td  align="right" class="style1">{{infoservice.result[4].subject}}</td>        
+        <td  align="right" class="style1">{{infoservice.result[4].code}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[4].creditth}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[4].creditpr}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[4].maxtheory}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[4].maxpractical}}</td> 
+        <td  align="right" class="style1"><input type="text" class="form-control" name="MT4" #MT4="ngModel" ngModel/></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="TH4" #TH4="ngModel" ngModel /></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="PR4" #PR4="ngModel" ngModel /></td>
+            <td  align="right" class="style1">{{infoservice.backlog4}}</td> 
+        </tr>
+    <tr>
+        <td  align="right" class="style1">{{infoservice.result[5].subject}}</td>        
+        <td  align="right" class="style1">{{infoservice.result[5].code}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[5].creditth}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[5].creditpr}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[5].maxtheory}}</td> 
+        <td  align="right" class="style1">{{infoservice.result[5].maxpractical}}</td> 
+        <td  align="right" class="style1"><input type="text" class="form-control" name="MT5" #MT5="ngModel" ngModel/></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="TH5" #TH5="ngModel" ngModel /></td>
+            <td  align="right" class="style1"><input type="text" class="form-control" name="PR5" #PR5="ngModel" ngModel /></td>
+    
+    <td  align="right" class="style1">{{infoservice.backlog5}}</td>         
+</tr>
+
+    
+    </table>
+    <td align="right" class="style1"><button type="submit" class="btn btn-primary">Submit</button></td>
+</form>
+    

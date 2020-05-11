@@ -1,0 +1,63 @@
+<button type="button" class="btn btn-primary" routerLink="/form">Add Student</button>
+<button type="button" class="btn btn-primary" routerLink="/courses">Add Courses</button>
+
+
+
+<div>
+    <form (ngSubmit)="searchStudent(details)" #details="ngForm">
+        <div class="row">
+          <div class="col-lg-3"></div>
+          <div class="col-lg-6">
+            <div class="form-row">
+                <div class="form-group">
+                <label>Branch</label>
+                <select name="branch" class="form-control" #branch="ngModel" ngModel>
+                    <option selected>Choose...</option>
+                    <option>Computer Science Engineering</option>
+                    <option>Civil Engineering</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Electrical Engineering</option>
+                    <option>Agriculture Engineering</option>
+                    <option>Mining Engineering</option>
+                    <option>Electronics and Communication Engineering</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                <label>Year</label>
+                <select name="year" class="form-control" #year="ngModel" ngModel>
+                    <option selected>Choose...</option>
+                    <option>First</option>
+                    <option>Second</option>
+                    <option>Third</option>
+                    <option>Fourth</option>
+                </select>
+                </div><br>
+                <div class="form-group">
+                <label>Semester</label>
+                <select name="semester" class="form-control" #semester="ngModel" ngModel>
+                    <option selected>Choose...</option>
+                    <option>First</option>
+                    <option>Second</option>
+                </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+         </div>
+         <div class="col-lg-3"></div>
+       </div>
+    </form>
+</div>
+<div *ngIf="isclicked">
+<table>
+    <tr>
+        <th style="width: 300px;">Enrollment number</th>
+        <th style="width: 300px;">Name</th>
+        <th style="width: 400px;">Branch</th>
+        <th style="width: 100px;">Year</th>
+        <th style="width: 100px;">Semester</th>
+   </tr>
+</table>
+<app-studentdetails [member]=item *ngFor="let item of addMember.result"></app-studentdetails>
+</div>

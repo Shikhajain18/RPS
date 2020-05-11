@@ -1,0 +1,88 @@
+<form (ngSubmit)="addCourses(details)" #details="ngForm">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+      
+      
+      
+      
+      
+      
+      
+      <div class="form-row">
+          <div class="form-group">
+            <label>Branch</label>
+            <select name="branch" class="form-control" #branch="ngModel" ngModel>
+              <option selected>Choose...</option>
+              <option>Computer Science Engineering</option>
+              <option>Civil Engineering</option>
+              <option>Mechanical Engineering</option>
+              <option>Electrical Engineering</option>
+              <option>Agriculture Engineering</option>
+              <option>Mining Engineering</option>
+              <option>Electronics and Communication Engineering</option>
+            </select>
+          </div>
+      </div>
+      <div class="form-row">
+          <div class="form-group">
+            <label>Year</label>
+            <select name="year" class="form-control" #year="ngModel" ngModel>
+              <option selected>Choose...</option>
+              <option>First</option>
+              <option>Second</option>
+              <option>Third</option>
+              <option>Fourth</option>
+            </select>
+          </div><br>
+          <div class="form-group">
+            <label>Semester</label>
+            <select name="semester" class="form-control" #semester="ngModel" ngModel>
+              <option selected>Choose...</option>
+              <option>First</option>
+              <option>Second</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" class="form-control" name="subject" #subject="ngModel" ngModel>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Max Theory</label>
+              <input type="text" class="form-control" name="maxtheory" #max theory="ngModel" ngModel>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Max Practical</label>
+              <input type="text" class="form-control" name="maxpractical" #max practical="ngModel" ngModel>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Credit TH</label>
+              <input type="text" class="form-control" name="creditth" #credit th="ngModel" ngModel>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Credit PR</label>
+              <input type="text" class="form-control" name="creditpr" #credit pr="ngModel" ngModel>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Code</label>
+              <input type="text" class="form-control" name="code" #code="ngModel" ngModel>
+            </div>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+  </form>
+  
