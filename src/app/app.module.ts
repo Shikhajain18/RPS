@@ -15,6 +15,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { FormComponent } from './form/form.component';
 import { MarksComponent } from './marks/marks.component';
 import { CoursepanelComponent } from './coursepanel/coursepanel.component';
+import { MarksheetComponent } from './marksheet/marksheet.component';
+import { ViewresultformComponent } from './viewresultform/viewresultform.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CoursepanelComponent } from './coursepanel/coursepanel.component';
     CoursesComponent,
     FormComponent,
     MarksComponent,
-    CoursepanelComponent
+    CoursepanelComponent,
+    MarksheetComponent,
+    ViewresultformComponent
   ],
   imports: [
     BrowserModule,

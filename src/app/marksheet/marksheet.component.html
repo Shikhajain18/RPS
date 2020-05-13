@@ -1,0 +1,170 @@
+
+<table>
+    <tbody>
+            <tr>
+              <td colspan="4">Name</td>
+              <td colspan="16">{{infoservice.entry.name}}</td>
+              
+            
+            </tr>
+            
+                  <tr>
+                        <td colspan="4">Enrollment No</td>
+                        <td colspan="8">{{infoservice.entry.enroll}}</td>
+                        
+                      
+                      </tr>
+                      <tr>
+                            <td colspan="4">Semester</td>
+                            <td colspan="8">{{infoservice.entry.semester}}</td>
+                            
+                          
+                          </tr>
+            </tbody>
+
+</table>
+
+  
+
+
+<table>
+      <thead>
+        <tr>
+          <td rowspan="2" >Course No </td>
+          <td colspan="2" rowspan="2">Title of Course </td>
+          <td colspan="2"> Credit Hrs </td>
+          <td colspan="3">Marks Obtained </td>
+          <td rowspan="2">Backlog</td>
+          
+          
+        </tr>
+        <tr>
+          <td>TH</td>
+          <td>PR</td>
+          <td>TH</td>
+          <td>PR</td>
+          <td>MT</td>
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{infoservice.report[0].code}}</td>
+          <td colspan="2">{{infoservice.report[0].subject}}</td>
+          <td>{{infoservice.report[0].creditth}}</td>
+          <td>{{infoservice.report[0].creditpr}}</td>
+          <td>{{infoservice.report[0].TH}}</td>
+          <td>{{infoservice.report[0].PR}}</td>
+          <td>{{infoservice.report[0].MT}}</td>
+          <td>{{infoservice.report[0].backlog}}</td>
+          
+        </tr>
+        <tr>
+          <td>{{infoservice.report[1].code}}</td>
+          <td colspan="2">{{infoservice.report[1].subject}}</td>
+          <td>{{infoservice.report[1].creditth}}</td>
+          <td>{{infoservice.report[1].creditpr}}</td>
+          <td>{{infoservice.report[1].TH}}</td>
+          <td>{{infoservice.report[1].PR}}</td>
+          <td>{{infoservice.report[1].MT}}</td>
+          <td>{{infoservice.report[1].backlog}}</td>
+          
+        </tr>
+        <tr>
+          <td>{{infoservice.report[2].code}}</td>
+          <td colspan="2">{{infoservice.report[2].subject}}</td>
+          <td>{{infoservice.report[2].creditth}}</td>
+          <td>{{infoservice.report[2].creditpr}}</td>
+          <td>{{infoservice.report[2].TH}}</td>
+          <td>{{infoservice.report[2].PR}}</td>
+          <td>{{infoservice.report[2].MT}}</td>
+          <td>{{infoservice.report[2].backlog}}</td>
+          
+        </tr>
+        <tr>
+          <td>{{infoservice.report[3].code}}</td>
+          <td colspan="2">{{infoservice.report[3].subject}}</td>
+          <td>{{infoservice.report[3].creditth}}</td>
+          <td>{{infoservice.report[3].creditpr}}</td>
+          <td>{{infoservice.report[3].TH}}</td>
+          <td>{{infoservice.report[3].PR}}</td>
+          <td>{{infoservice.report[3].MT}}</td>
+          <td>{{infoservice.report[3].backlog}}</td>
+          
+        </tr>
+        <tr>
+          <td>{{infoservice.report[4].code}}</td>
+          <td colspan="2">{{infoservice.report[4].subject}}</td>
+          <td>{{infoservice.report[4].creditth}}</td>
+          <td>{{infoservice.report[4].creditpr}}</td>
+          <td>{{infoservice.report[4].TH}}</td>
+          <td>{{infoservice.report[4].PR}}</td>
+          <td>{{infoservice.report[4].MT}}</td>
+          <td>{{infoservice.report[4].backlog}}</td>
+          
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>{{infoservice.report[5].code}}</td>
+          <td colspan="2">{{infoservice.report[5].subject}}</td>
+          <td>{{infoservice.report[5].creditth}}</td>
+          <td>{{infoservice.report[5].creditpr}}</td>
+          <td>{{infoservice.report[5].TH}}</td>
+          <td>{{infoservice.report[5].PR}}</td>
+          <td>{{infoservice.report[5].MT}}</td>
+          <td>{{infoservice.report[5].backlog}}</td>
+          
+        </tr>
+
+        
+    </table>
+  
+  <div *ngIf="infoservice.isSem1"> 
+<tbody>
+    <tr><b>Grade Point Average for the Semester (SGPA) : {{infoservice.finalresult[0].Sem1}}</b></tr>
+</tbody>
+</div> 
+<div *ngIf="infoservice.isSem2"> 
+  <tbody>
+      <tr><b>Grade Point Average for the Semester (SGPA) : {{infoservice.finalresult[0].Sem2}}</b></tr>
+  </tbody>
+  </div> 
+  <div *ngIf="infoservice.isSem3"> 
+    <tbody>
+        <tr><b>Grade Point Average for the Semester (SGPA) : {{infoservice.finalresult[0].Sem3}}</b></tr>
+    </tbody>
+    </div> 
+    <div *ngIf="infoservice.isSem4"> 
+      <tbody>
+          <tr><b>Grade Point Average for the Semester (SGPA) : {{infoservice.finalresult[0].Sem4}}</b></tr>
+      </tbody>
+      </div> 
+      <div *ngIf="infoservice.isSem5"> 
+        <tbody>
+            <tr><b>Grade Point Average for the Semester (SGPA) : {{infoservice.finalresult[0].Sem5}}</b></tr>
+        </tbody>
+        </div> 
+        <div *ngIf="infoservice.isSem6"> 
+          <tbody>
+              <tr><b>Grade Point Average for the Semester (SGPA) : {{infoservice.finalresult[0].Sem6}}</b></tr>
+          </tbody>
+          </div> 
+          <div *ngIf="infoservice.isSem7"> 
+            <tbody>
+                <tr><b>Grade Point Average for the Semester (SGPA) : {{infoservice.finalresult[0].Sem7}}</b></tr>
+            </tbody>
+            </div> 
+            <div *ngIf="infoservice.isSem8"> 
+              <tbody>
+                  <tr><b>Grade Point Average for the Semester (SGPA) : {{infoservice.finalresult[0].Sem8}}</b></tr>
+              </tbody>
+              </div> 
+
+
+<tbody>
+    <tr><b>Overall Point Average (OGPA) : {{infoservice.finalresult[0].ogpa}}</b></tr>
+</tbody>
+
+ 

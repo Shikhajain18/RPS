@@ -1,0 +1,42 @@
+html {
+    font-family:arial;
+    font-size: 18px;
+  }
+  
+  td {
+    border: 2px solid white;
+    padding: 10px;
+    
+  }
+  
+  thead{
+    font-weight:bold;
+    text-align:center;
+    background: #6c6c6c;
+    color:white;
+    
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  .footer {
+    text-align:right;
+    font-weight:bold;
+  }
+  tfoot{
+    background-color: #f6f6f6;
+}
+  
+  
+  tbody {
+    background-color: #f6f6f6;
+    td {
+        border: 2px solid white;
+        padding: 15px;
+      
+        
+      }
+  }
+  

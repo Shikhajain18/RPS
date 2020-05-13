@@ -1,11 +1,23 @@
+<div class="row">
+    <div class="col-lg-3"></div>
+<div class="col-lg-6">
 <form (ngSubmit)="addMarks(details)" #details="ngForm">
-    <div><h3>Enrollment No - </h3><p>{{infoservice.result[0].enroll}}</p>
-    </div>
-    <div><h3>Semester - </h3><p>{{infoservice.result[0].semester}}</p>
-    </div>
-    <div><h3>Year - </h3><p>{{infoservice.result[0].year}}</p>
-    </div>
-        <table border="1px solid black">
+    <table>
+        <tr>
+    <td><h5>Enrollment No - </h5></td>
+    <td><p>{{infoservice.result[0].enroll}}</p></td>
+</tr>
+<tr>
+   <td> <h5>Semester - </h5></td>
+   <td><p>{{infoservice.result[0].semester}}</p></td>
+</tr>
+<tr>
+    <td><h5>Year - </h5></td>
+    <td><p>{{infoservice.result[0].year}}</p></td>
+</tr>
+
+</table>
+    <table border="1px solid black">
         <tr>
             <th>SUBJECTS</th>
             <th>Code</th>
@@ -68,7 +80,7 @@
             <td  align="right" class="style1"><input type="text" class="form-control" name="PR3" #PR3="ngModel" ngModel /></td>
             <td  align="right" class="style1">{{infoservice.backlog3}}</td> 
         </tr>
-    <tr>
+     <tr>
     <td  align="right" class="style1">{{infoservice.result[4].subject}}</td>        
         <td  align="right" class="style1">{{infoservice.result[4].code}}</td> 
         <td  align="right" class="style1">{{infoservice.result[4].creditth}}</td> 
@@ -96,6 +108,64 @@
 
     
     </table>
-    <td align="right" class="style1"><button type="submit" class="btn btn-primary">Submit</button></td>
+    <button align="right" type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+
+<button class="btn btn-primary" (click)="show()">Give Result</button>
+
+
+</div>
+<div class="col-lg-3"></div>
+</div>
+
+<div *ngIf="showresult">
+    <p>Result of {{sem}} sem is {{totalresult}}</p>
     
+
+    <table style="border:1px solid black">
+        <tr>
+    <td style="width: 300px;">Enroll </td>
+    <td style="width: 300px;">SGPA 1</td>
+    <td style="width: 300px;">SGPA 2</td>
+    <td style="width: 300px;">SGPA 3</td>
+    <td style="width: 300px;">SGPA 4</td>
+    <td style="width: 300px;">SGPA 5</td>
+    <td style="width: 300px;">SGPA 6</td>
+    <td style="width: 300px;">SGPA 7</td>
+    <td style="width: 300px;">SGPA 8</td>
+    <td style="width: 300px;">OGPA</td>
+</tr>
+</table>    
+<br>
+    <table style="border:1px solid black" *ngIf="!isalready">
+        <tr>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="details1.enroll"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="details1.Sem1"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="details1.Sem2"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="details1.Sem3"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="details1.Sem4"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="details1.Sem5"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="details1.Sem6"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="details1.Sem7"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="details1.Sem8"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="details1.ogpa"></td>
+        </tr>
+    </table>
+
+    <table style="border:1px solid black" *ngIf="isalready">
+        <tr>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="editresult.enroll"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="editresult.Sem1"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="editresult.Sem2"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="editresult.Sem3"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="editresult.Sem4"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="editresult.Sem5"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="editresult.Sem6"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="editresult.Sem7"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="editresult.Sem8"></td>
+    <td style="width: 300px;"><input class = "form-control" type="text" [(ngModel)]="editresult.ogpa"></td>
+        </tr>
+    </table>
+    <button (click)="addresult()" class="btn btn-primary">Submit</button>
+</div>

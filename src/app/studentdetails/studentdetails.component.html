@@ -2,10 +2,11 @@
     <table border="1px solid black">
         <tr>
             <td style="width: 300px;">{{result1.enroll}}</td>
-            <td style="width: 300px;" (click)="onAdd()">{{result1.name}}</td>
+            <td style="width: 300px;" (click)="onAdd(result1.enroll, result1.year, result1.semester,result1.name)">{{result1.name}}</td>
             <td style="width: 400px;">{{result1.branch}}</td>
             <td style="width: 100px;">{{result1.year}}</td>
             <td style="width: 100px;">{{result1.semester}}</td>
         </tr>
     </table>
     </div>
+    <router-outlet></router-outlet>

@@ -1,6 +1,7 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { AddmembersService } from '../addmembers.service';
 import { NgForm } from '@angular/forms';
+import { InfoService } from '../info.service';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,10 @@ import { NgForm } from '@angular/forms';
 export class HomeComponent implements OnInit {
   title = 'resultps';
   isclicked=false
-  constructor(public addMember:AddmembersService) { }
+  constructor(public addMember:AddmembersService,public infoservice:InfoService) { }
 
   ngOnInit(): void {
+    this.infoservice.getMarks();
   }
   searchStudent(formData:NgForm){
     console.log(formData)
